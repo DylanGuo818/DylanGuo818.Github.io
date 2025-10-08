@@ -1,4 +1,6 @@
+
 ---
+layout: home
 title: Titanic Survival Prediction
 subtitle: Logistic Regression with Feature Engineering and Evaluation
 image: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-full.jpg
@@ -10,6 +12,7 @@ caption:
   thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-thumbnail.jpg
 ---
 
+
 This project demonstrates a complete logistic regression pipeline using the Titanic dataset. **Markdown** supported. The notebook walks through data preprocessing, model training, evaluation, and prediction on unseen test data.
 
 {:.list-inline}
@@ -19,9 +22,6 @@ This project demonstrates a complete logistic regression pipeline using the Tita
 - Category: Classification
 
 ---
-
-### 🚢 Overview
-
 This project explores how to build a logistic regression model to predict survival on the Titanic. It includes:
 
 - Data cleaning and imputation
@@ -29,24 +29,17 @@ This project explores how to build a logistic regression model to predict surviv
 - Feature engineering
 - Model training and evaluation
 - Prediction on test data
-
 ---
-
-### 🧹 Data Preprocessing
-
 - Missing `Age` values were filled using the average age grouped by `Sex` and `Pclass`.
 - Missing `Fare` values in the test set were filled similarly.
 - Categorical variables (`Sex`, `Embarked`) were converted to dummy variables using `pd.get_dummies`.
 
 ---
 
-### ⚠️ Why Not Use `Survived` for Imputation?
-
 Using the `Survived` column to fill missing values like `Age` would cause **data leakage**, leading to overly optimistic model performance and poor generalization.
 
 ---
 
-### 🧠 Model Building Steps
 
 1. **Feature Selection**  
    Selected features: `Pclass`, `Age`, `SibSp`, `Parch`, `Fare`, `Sex_male`, `Embarked_Q`, `Embarked_S`
@@ -70,7 +63,6 @@ Using the `Survived` column to fill missing values like `Age` would cause **data
 
 ---
 
-### 🧪 Test Data Prediction
 
 - Preprocessed test data to match training format
 - Predicted survival outcomes
@@ -78,7 +70,6 @@ Using the `Survived` column to fill missing values like `Age` would cause **data
 
 ---
 
-### 🧬 Bonus: Feature Engineering
 
 Created a new feature `FamilySize = SibSp + Parch` and retrained the model using:
 
