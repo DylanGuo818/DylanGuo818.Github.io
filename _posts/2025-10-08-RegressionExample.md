@@ -1,4 +1,3 @@
-
 ---
 layout: home
 title: Titanic Survival Prediction
@@ -12,7 +11,6 @@ caption:
   thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-thumbnail.jpg
 ---
 
-
 This project demonstrates a complete logistic regression pipeline using the Titanic dataset. **Markdown** supported. The notebook walks through data preprocessing, model training, evaluation, and prediction on unseen test data.
 
 {:.list-inline}
@@ -22,6 +20,7 @@ This project demonstrates a complete logistic regression pipeline using the Tita
 - Category: Classification
 
 ---
+
 This project explores how to build a logistic regression model to predict survival on the Titanic. It includes:
 
 - Data cleaning and imputation
@@ -29,7 +28,9 @@ This project explores how to build a logistic regression model to predict surviv
 - Feature engineering
 - Model training and evaluation
 - Prediction on test data
+
 ---
+
 - Missing `Age` values were filled using the average age grouped by `Sex` and `Pclass`.
 - Missing `Fare` values in the test set were filled similarly.
 - Categorical variables (`Sex`, `Embarked`) were converted to dummy variables using `pd.get_dummies`.
@@ -39,7 +40,6 @@ This project explores how to build a logistic regression model to predict surviv
 Using the `Survived` column to fill missing values like `Age` would cause **data leakage**, leading to overly optimistic model performance and poor generalization.
 
 ---
-
 
 1. **Feature Selection**  
    Selected features: `Pclass`, `Age`, `SibSp`, `Parch`, `Fare`, `Sex_male`, `Embarked_Q`, `Embarked_S`
@@ -63,13 +63,11 @@ Using the `Survived` column to fill missing values like `Age` would cause **data
 
 ---
 
-
 - Preprocessed test data to match training format
 - Predicted survival outcomes
 - Added predictions back to the test DataFrame
 
 ---
-
 
 Created a new feature `FamilySize = SibSp + Parch` and retrained the model using:
 
